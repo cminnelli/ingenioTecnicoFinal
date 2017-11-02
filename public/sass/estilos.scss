@@ -1,0 +1,775 @@
+
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Cabin|Catamaran|Cormorant+Garamond|EB+Garamond|Inconsolata|Lato|Libre+Franklin|Montserrat|Oxygen|Questrial|Quicksand|Raleway|Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Source+Serif+Pro|Varela+Round');
+@import url('http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+@import url('../css/animate.css');
+
+
+
+
+
+$secondary-color:#B9DCE0;
+$color-grey:rgba(30,30,30,0.8);
+
+$color-background:#EDEEF2;
+
+$color-ingenio1:#055174;
+$color-ingenio2:#028090;
+$color-ingenio3:#00a896;
+$color-ingenio4:#f261ad;
+$color-nosotros:#EDEEF2;
+
+
+$font-primary:'Quicksand', sans-serif;
+$font-encabezado:'Quicksand', sans-serif;
+$font-navegador:'Quicksand', sans-serif;
+$font-titulos:'Quicksand', sans-serif;
+
+/*CLASES GENERALES*/
+.centerpos{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+@keyframes pulsar{
+	from{
+	height:150px;
+	}	
+	to{
+	height:190px;
+	}
+}
+
+/*LOADING SECTION*/
+
+.loading{
+
+	background: whitesmoke;
+	overflow-y:hidden;
+	height:100vh;
+	background-color:white;
+	z-index:3;
+
+	.sloganIT{
+		@extend .centerpos;
+		top:62%;
+		text-align: center;
+		font-size: 18px;
+		letter-spacing: 2.2px;
+		color:$color-grey;
+		font-family: "Roboto";
+		@media screen and (max-width:600px){
+			bottom:60%;
+			
+		}
+
+		span{
+			color:$color-ingenio3;
+			font-size: 25px;
+			font-family: 'Roboto';
+		}
+
+		@media screen and (max-width:600px){
+			font-size: 14px;
+			top:59%;
+		}
+
+	}
+	
+	.loadingWrapper{
+		height:200px;
+		.logoIT{
+			animation:pulsar 3s;
+			animation-iteration-count: infinite;
+			@extend .centerpos;
+			height: 150px;
+			
+		}	
+	}	
+}
+
+
+.bodyMain{
+	font-family: $font-primary;
+	overflow-y:hidden;
+}
+
+/*BOOTSTRAP MODIFY*/
+h1, .container , .container-fluid{
+	margin:0;
+	margin-left: 0px;
+	margin-right: 0;
+	padding:0px;
+	padding-left:0px;
+	padding-right: 0px;
+}
+.navbar-header , .navbar-default {
+border-radius: 0;
+background:rgba(255,255,255,0.3);
+border:none;
+
+}
+
+.navbar-toggle , .collapsed{
+border:none;
+&:hover{
+	border:none;
+}
+}
+
+.navbar-default .navbar-nav>li>a{
+	color:$color-grey;
+	font-size: 14px;
+	  
+}
+
+.navbar-default .navbar-nav>li{
+	color:$color-grey; 
+	font-size: 13px;
+	padding:0px;
+	text-align:center;
+	font-weight: 700;
+}
+.highNav{
+	height: 40px;
+	background-color:$color-ingenio1;
+	position: fixed;
+	color:white;
+	transition:0.6s;
+	animation:fadeInDown 2.5s;
+}
+
+/*PORTADA SECTION*/
+
+$color-whiteopacity:rgba(255, 255, 255, 0.90);
+
+.portada{
+	
+	background: url("/imagenes/web/portada13.jpg")  no-repeat top;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position:top;
+	height: 100vh;
+	position: relative;
+	z-index: 1000;
+
+	#mainportada{
+		height: 100%;
+		.slogan{
+			@extend .centerpos;
+			top:48%;
+	
+		}
+		.logoWrapper{
+			height: 200px;
+			width: 200px;
+			border-radius: 50%;	
+			@extend .centerpos;
+			top:55%;		
+			background: $color-whiteopacity;
+			padding:20px;	
+			
+			.logoIT{
+				height: 135px;
+				@extend .centerpos;
+		
+	
+				
+			}
+	
+		}
+
+	}
+
+
+
+}
+
+
+/*NAVBAR*/
+
+.navBar{
+	
+	width: 100%;
+	position: fixed;
+	z-index: 3;
+	margin-top:30px;
+
+	color:$color-ingenio1;
+
+
+	ul{
+		padding:100px;
+		padding-top:20px;
+		margin:0px;
+		text-align: left;
+
+		li{
+			&:first-child{
+			color:orange;
+			}
+			color:black;
+			list-style: none;
+			padding-right: 25px;
+			font-size: 14px;
+			cursor: pointer;
+			display: inline-block;
+			&:hover{
+				transition: 1s;
+				color:orange;
+			}
+			span{
+				font-size: 18px;
+				padding:3px;
+				margin-right:2px;
+			}
+		}
+	}
+
+}
+
+$color-titulos:#484848;
+.titulos{
+	color:$color-titulos;
+	text-align: left;
+	padding:5px;
+}
+
+/*NOSOTROS SECTION*/
+
+.nosotros{
+	position:relative;
+	.col-xs-12 , .col-xs-6, .row{
+		padding:0px;
+		margin:0px;
+	}
+	color:#4F4E4A;
+	text-align: center;
+
+	.modulo-nosotros{
+		transition: 1s;
+		background-color:$color-nosotros;
+		// &:hover{
+		// 	background-color: $color-ingenio1;
+		// 	transition:1s;
+		// 	& p{
+		// 		color:white;
+		// 		transition:1s;
+		// 	}
+		// 	& h2{
+		// 		color:black;
+		// 		transition:1s;
+		// 	}
+		// 	& h5{
+		// 		color:crimson;
+		// 		transition:1s;
+		// 	}
+		// }
+
+
+			.engineertool{
+				height: 250px;
+				position: absolute;
+				height: 100%;
+				right: 0px;
+				transition: 1s;
+				@media screen and (max-width:800px){
+					display: none;
+				}
+			}
+		
+
+		.texto-wrapper{
+			padding:50px;
+			h2{
+				margin-top:0;
+				margin-bottom:15px;
+				margin-top:8px;
+			}
+			h5{
+				text-transform: uppercase;
+				color:$color-ingenio2;
+				margin-top:0;
+				margin-bottom:0;
+				margin-top:5px;
+			}
+			p{
+				line-height: 2;
+				width: 65%;
+				@media screen and (max-width:600px){
+					width: 98%;
+					text-align: justify;
+				}
+				margin:0 auto;
+			}
+
+		}
+	
+	
+
+
+	}
+
+
+}
+
+
+/*SERVICIOS SECTION*/
+
+.servicios{
+
+	
+	padding:20px;	
+	background:white;
+	
+		.servGeneral{
+			padding:40px;
+			@media screen and (max-width:600px){
+				padding:20px;
+			}			
+			.servWrapper{
+				border:10px solid white;
+				margin:0px;
+				margin-bottom:5px;
+				padding:0px;
+				
+				background-color:white;			
+				
+				&:hover{
+					transition:0.5s;
+					transform: scale(1.06,1.06);
+					filter: blur(0);
+					transform-origin: 50% 0;
+				}
+				&:hover img{
+					
+					overflow: hidden;
+				}
+				&:hover .textWrapper{
+				
+					background-color:white;
+					transition:0.8s;
+					color:darken($color-ingenio1 , 25%);
+				}
+				&:hover .servBody{
+					
+					transition:0.5s;					
+					color:darken($color-ingenio1 , 35%);
+				}
+
+				.servHead{			
+					padding:0px;
+					img{
+						border-radius: 3px;
+						max-height: 249.781px;
+					}
+
+
+					.textWrapper{
+						
+						text-align: center;
+						padding:5px;
+
+						.serv-tit{
+							text-align: center;
+							font-weight: 700;
+					
+							
+							
+						}
+					}
+				}
+				.servBody{
+		
+					background-color:white;
+					color:$color-titulos;
+					padding:18px;
+					text-align: center;
+					line-height: 1.5;
+				}
+			}
+		}
+	}
+
+
+
+/*BUSQUEDAS SECTION*/
+
+
+.encabezado{
+	font-family: $font-encabezado;
+	color:$color-grey;
+	text-align: center;
+	font-weight: 900;
+	&.servicio-title{
+		color:$color-titulos;
+	}
+	&.busquedas-title{
+		color:black;
+	}
+
+	h3{
+		padding:15px;
+		margin:0;
+		font-size: 35px;
+		//text-transform: uppercase;
+		span{
+			padding:5px;
+			display: block;
+
+		}
+	}
+}
+
+
+
+	.busquedas{
+		padding:20px;
+		background:whitesmoke;
+		background: url("/imagenes/web/portada10.jpg")  no-repeat top;
+		background-attachment: fixed;
+		//background-image:linear-gradient(20deg,  whitesmoke 0% , $color-grey 90%);	
+		.row{
+			margin:0;
+		}
+		color: black;
+
+		
+		label{
+			padding:5px;
+			color:whitesmoke;
+		}
+
+
+		.jobs-result{	
+			
+			text-align: center;			
+			margin-bottom:10px;	
+			padding:10px;			
+			
+			.job-offer{
+				
+				margin:0px;
+				padding:0px;
+
+
+				.job-wrapp{
+					width: 95%;
+					margin:0 auto;
+					padding:15px;
+					background-color:$color-whiteopacity;
+					margin-bottom:10px;
+					border-bottom:5px solid $color-ingenio1;
+					&:hover{
+						border-bottom:5px solid $color-ingenio3;
+						transition:0.9s;
+						& span{
+							color:$color-ingenio2;
+							transition: 1.2s;
+						}
+					}
+
+				}
+
+	
+				.job-head{
+					
+					.job-title{
+						font-weight:700;
+						letter-spacing: 1.3px;
+						color:darken($color-ingenio1,30%);
+					}
+					
+
+					padding:10px;
+				}
+				.job-body{
+					height:200px;
+					padding:10px;
+					text-align: left;
+					letter-spacing: 1.5px;
+					padding:5px;
+			
+				}
+
+				.iconGroup{
+					position: absolute;
+					bottom:15px;
+					right:35px;
+					.linkICON{
+						padding:5px;
+						color:$color-ingenio1;
+						font-size: 40px;
+						cursor:pointer;
+					
+					}
+				}
+
+				.job-title{
+					margin-top:10px;					
+					font-weight: 700;
+					color:darken($color-ingenio1 , 35%);
+				}
+
+
+	
+				.icon{
+					padding:3px;
+					margin-right:4px;
+					color:#0077B5;
+					font-size: 18px;
+				}
+				&:hover .icon{
+					transition:0.8s;
+								
+				}
+				label{
+					color:$color-grey;
+					text-align: left;
+					
+				}
+
+			}
+		}
+
+			/*MENSAJE DE LINKEDIN*/
+
+	.linkedin-wrapper{
+		border-radius: 5px;
+
+		text-align: center;			
+		color:rgba(100,100,100,0.8);
+		background-image: linear-gradient(-20deg, $color-ingenio1 0%, lighten($color-ingenio3, 40%) 100%);
+		padding:18px;
+		position:relative;
+	
+		label,span{
+			color:black;
+			padding:5px;
+			&.link{
+				color:aliceblue;
+			}
+		}
+		.toolimg{
+			height: 90px;
+			padding:5px;
+			display: block;
+			margin: 0 auto;
+// @extend .centerpos;
+// left: 80px;
+			
+		}
+		
+		.linkedin-msg{
+			display: none;
+			text-align: center;
+			color:black;
+			p{
+				span{
+					color:$secondary-color;
+				}				
+				margin:0;
+				padding:5px;
+
+			}
+		}
+		.linkedin-icon{
+			padding:5px;
+			font-size: 18px;
+		}
+		#linkedin-but{
+			margin-top:10px;
+
+		}
+		.form-control,.input-group-addon{
+			background-color:$color-whiteopacity;
+			font-size: 11px;
+			border-radius: 5px;
+			text-align: center;
+			outline: none;
+			border:0;
+			box-shadow: 0;
+			color:$color-grey;
+			border-bottom:1px solid white;
+			&:focus{
+				outline: none;
+				border:0;
+			}
+		}
+	}
+
+	}
+
+
+
+
+	/*CONTACTO SECTION*/
+	
+
+	.contacto{	
+		background-attachment: fixed;
+		background:$color-nosotros;
+		background-size: cover;
+
+	
+		padding:20px;
+
+		.row{
+			padding:0px;
+			margin:0px;
+		}
+		input ,textarea{
+			border-right:none;
+			border-left: none;	
+			font-size: 13px;
+			outline: none;
+			border:none;
+			box-shadow: none;
+			background-color: rgba(100,100,100,0.25);
+			color:$color-ingenio1;
+			transition: 1.6s;
+			&:focus{
+				outline: none;
+				box-shadow: none;
+				background-color: rgba(100,100,100,0.25);
+				color:$color-ingenio1;
+				transition: 1.6s;
+
+			}
+		}
+		// .transparencia{
+		// 	position: absolute;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	background-color:lighten(grey,10%);
+			
+		// 	z-index:-1;
+		// 	top:0;
+		// 	opacity: 0.5;
+		// }
+	}
+
+
+	#footer-wrapper{
+		
+		.footer-title{
+			font-weight: 700;
+			padding:2px;
+		}
+		.copyright{
+
+			box-shadow:inset 0px 0px 120px rgba(0,0,0,0.4);
+		-webkit-box-shadow:inset 0px 0px 120px rgba(0,0,0,0.4);
+		-moz-box-shadow:inset 0px 0px 120px rgba(0,0,0,0.4);
+	
+		height: 55%;
+		background-color:rgba(105, 120, 131, 0.34);
+		color: black;
+		box-shadow: 10px 10px 5px #888888;
+		padding:18px;
+		.telefono , .direccion , .social-media{
+			padding:10px;
+			text-align: center;
+		}
+		.social-media{
+			
+			a{
+				text-decoration: none;
+				span{
+					color:$color-ingenio1;
+					padding:5px;
+					font-size: 30px;
+
+				}
+			}
+
+		}
+			p ,h5{
+				padding:3px;
+				margin-bottom:0;
+			
+				margin:0;
+			span{
+				padding:8px;
+				color: lighten($color-ingenio1,0.2);
+			}
+
+
+		}
+	
+		}
+		.design-contact{
+			cursor:pointer;
+			height: 45%;
+			background-color:#24292E;
+			color:whitesmoke;
+			font-size: 15px;
+			box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+			p{
+				padding:10px;
+				margin-bottom:0;
+			}
+	
+		}
+	}
+
+
+.admin{
+
+	.linkedin{
+		.linkelist{
+			height: 400px;
+			overflow-y: scroll;	
+		}
+
+	}
+	.jobWrapper{
+		padding:5px;
+
+		height: 400px;
+		overflow-y: scroll;
+		.jobMenu{
+			h4{
+				display: inline-block;
+			}
+			padding:10px;			
+			border-bottom:1px solid $color-ingenio1;
+		}
+	}
+}
+
+
+
+
+li > a , .servWrapper{
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+li > a:hover ,.servWrapper:hover {
+  color: #000;
+    text-decoration: none;
+}
+
+li > a:before ,.servWrapper:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.8px;
+  bottom: 0;
+  left: 0;
+  background-color: $color-ingenio3;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+li > a:hover:before ,.servWrapper:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}

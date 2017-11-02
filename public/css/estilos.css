@@ -1,0 +1,471 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Cabin|Catamaran|Cormorant+Garamond|EB+Garamond|Inconsolata|Lato|Libre+Franklin|Montserrat|Oxygen|Questrial|Quicksand|Raleway|Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Source+Serif+Pro|Varela+Round");
+@import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+@import url("../css/animate.css");
+/*CLASES GENERALES*/
+.centerpos, .loading .sloganIT, .loading .loadingWrapper .logoIT, .portada #mainportada .slogan, .portada #mainportada .logoWrapper, .portada #mainportada .logoWrapper .logoIT {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+@keyframes pulsar {
+  from {
+    height: 150px; }
+  to {
+    height: 190px; } }
+/*LOADING SECTION*/
+.loading {
+  background: whitesmoke;
+  overflow-y: hidden;
+  height: 100vh;
+  background-color: white;
+  z-index: 3; }
+  .loading .sloganIT {
+    top: 62%;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 2.2px;
+    color: rgba(30, 30, 30, 0.8);
+    font-family: "Roboto"; }
+    @media screen and (max-width: 600px) {
+      .loading .sloganIT {
+        bottom: 60%; } }
+    .loading .sloganIT span {
+      color: #00a896;
+      font-size: 25px;
+      font-family: 'Roboto'; }
+    @media screen and (max-width: 600px) {
+      .loading .sloganIT {
+        font-size: 14px;
+        top: 59%; } }
+  .loading .loadingWrapper {
+    height: 200px; }
+    .loading .loadingWrapper .logoIT {
+      animation: pulsar 3s;
+      animation-iteration-count: infinite;
+      height: 150px; }
+
+.bodyMain {
+  font-family: "Quicksand", sans-serif;
+  overflow-y: hidden; }
+
+/*BOOTSTRAP MODIFY*/
+h1, .container, .container-fluid {
+  margin: 0;
+  margin-left: 0px;
+  margin-right: 0;
+  padding: 0px;
+  padding-left: 0px;
+  padding-right: 0px; }
+
+.navbar-header, .navbar-default {
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border: none; }
+
+.navbar-toggle, .collapsed {
+  border: none; }
+  .navbar-toggle:hover, .collapsed:hover {
+    border: none; }
+
+.navbar-default .navbar-nav > li > a {
+  color: rgba(30, 30, 30, 0.8);
+  font-size: 14px; }
+
+.navbar-default .navbar-nav > li {
+  color: rgba(30, 30, 30, 0.8);
+  font-size: 13px;
+  padding: 0px;
+  text-align: center;
+  font-weight: 700; }
+
+.highNav {
+  height: 40px;
+  background-color: #055174;
+  position: fixed;
+  color: white;
+  transition: 0.6s;
+  animation: fadeInDown 2.5s; }
+
+/*PORTADA SECTION*/
+.portada {
+  background: url("/imagenes/web/portada13.jpg") no-repeat top;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+  position: relative;
+  z-index: 1000; }
+  .portada #mainportada {
+    height: 100%; }
+    .portada #mainportada .slogan {
+      top: 48%; }
+    .portada #mainportada .logoWrapper {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      top: 55%;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px; }
+      .portada #mainportada .logoWrapper .logoIT {
+        height: 135px; }
+
+/*NAVBAR*/
+.navBar {
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  margin-top: 30px;
+  color: #055174; }
+  .navBar ul {
+    padding: 100px;
+    padding-top: 20px;
+    margin: 0px;
+    text-align: left; }
+    .navBar ul li {
+      color: black;
+      list-style: none;
+      padding-right: 25px;
+      font-size: 14px;
+      cursor: pointer;
+      display: inline-block; }
+      .navBar ul li:first-child {
+        color: orange; }
+      .navBar ul li:hover {
+        transition: 1s;
+        color: orange; }
+      .navBar ul li span {
+        font-size: 18px;
+        padding: 3px;
+        margin-right: 2px; }
+
+.titulos {
+  color: #484848;
+  text-align: left;
+  padding: 5px; }
+
+/*NOSOTROS SECTION*/
+.nosotros {
+  position: relative;
+  color: #4F4E4A;
+  text-align: center; }
+  .nosotros .col-xs-12, .nosotros .col-xs-6, .nosotros .row {
+    padding: 0px;
+    margin: 0px; }
+  .nosotros .modulo-nosotros {
+    transition: 1s;
+    background-color: #EDEEF2; }
+    .nosotros .modulo-nosotros .engineertool {
+      height: 250px;
+      position: absolute;
+      height: 100%;
+      right: 0px;
+      transition: 1s; }
+      @media screen and (max-width: 800px) {
+        .nosotros .modulo-nosotros .engineertool {
+          display: none; } }
+    .nosotros .modulo-nosotros .texto-wrapper {
+      padding: 50px; }
+      .nosotros .modulo-nosotros .texto-wrapper h2 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        margin-top: 8px; }
+      .nosotros .modulo-nosotros .texto-wrapper h5 {
+        text-transform: uppercase;
+        color: #028090;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-top: 5px; }
+      .nosotros .modulo-nosotros .texto-wrapper p {
+        line-height: 2;
+        width: 65%;
+        margin: 0 auto; }
+        @media screen and (max-width: 600px) {
+          .nosotros .modulo-nosotros .texto-wrapper p {
+            width: 98%;
+            text-align: justify; } }
+
+/*SERVICIOS SECTION*/
+.servicios {
+  padding: 20px;
+  background: white; }
+  .servicios .servGeneral {
+    padding: 40px; }
+    @media screen and (max-width: 600px) {
+      .servicios .servGeneral {
+        padding: 20px; } }
+    .servicios .servGeneral .servWrapper {
+      border: 10px solid white;
+      margin: 0px;
+      margin-bottom: 5px;
+      padding: 0px;
+      background-color: white; }
+      .servicios .servGeneral .servWrapper:hover {
+        transition: 0.5s;
+        transform: scale(1.06, 1.06);
+        filter: blur(0);
+        transform-origin: 50% 0; }
+      .servicios .servGeneral .servWrapper:hover img {
+        overflow: hidden; }
+      .servicios .servGeneral .servWrapper:hover .textWrapper {
+        background-color: white;
+        transition: 0.8s;
+        color: black; }
+      .servicios .servGeneral .servWrapper:hover .servBody {
+        transition: 0.5s;
+        color: black; }
+      .servicios .servGeneral .servWrapper .servHead {
+        padding: 0px; }
+        .servicios .servGeneral .servWrapper .servHead img {
+          border-radius: 3px;
+          max-height: 249.781px; }
+        .servicios .servGeneral .servWrapper .servHead .textWrapper {
+          text-align: center;
+          padding: 5px; }
+          .servicios .servGeneral .servWrapper .servHead .textWrapper .serv-tit {
+            text-align: center;
+            font-weight: 700; }
+      .servicios .servGeneral .servWrapper .servBody {
+        background-color: white;
+        color: #484848;
+        padding: 18px;
+        text-align: center;
+        line-height: 1.5; }
+
+/*BUSQUEDAS SECTION*/
+.encabezado {
+  font-family: "Quicksand", sans-serif;
+  color: rgba(30, 30, 30, 0.8);
+  text-align: center;
+  font-weight: 900; }
+  .encabezado.servicio-title {
+    color: #484848; }
+  .encabezado.busquedas-title {
+    color: black; }
+  .encabezado h3 {
+    padding: 15px;
+    margin: 0;
+    font-size: 35px; }
+    .encabezado h3 span {
+      padding: 5px;
+      display: block; }
+
+.busquedas {
+  padding: 20px;
+  background: whitesmoke;
+  background: url("/imagenes/web/portada10.jpg") no-repeat top;
+  background-attachment: fixed;
+  color: black;
+  /*MENSAJE DE LINKEDIN*/ }
+  .busquedas .row {
+    margin: 0; }
+  .busquedas label {
+    padding: 5px;
+    color: whitesmoke; }
+  .busquedas .jobs-result {
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px; }
+    .busquedas .jobs-result .job-offer {
+      margin: 0px;
+      padding: 0px; }
+      .busquedas .jobs-result .job-offer .job-wrapp {
+        width: 95%;
+        margin: 0 auto;
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 10px;
+        border-bottom: 5px solid #055174; }
+        .busquedas .jobs-result .job-offer .job-wrapp:hover {
+          border-bottom: 5px solid #00a896;
+          transition: 0.9s; }
+          .busquedas .jobs-result .job-offer .job-wrapp:hover span {
+            color: #028090;
+            transition: 1.2s; }
+      .busquedas .jobs-result .job-offer .job-head {
+        padding: 10px; }
+        .busquedas .jobs-result .job-offer .job-head .job-title {
+          font-weight: 700;
+          letter-spacing: 1.3px;
+          color: black; }
+      .busquedas .jobs-result .job-offer .job-body {
+        height: 200px;
+        padding: 10px;
+        text-align: left;
+        letter-spacing: 1.5px;
+        padding: 5px; }
+      .busquedas .jobs-result .job-offer .iconGroup {
+        position: absolute;
+        bottom: 15px;
+        right: 35px; }
+        .busquedas .jobs-result .job-offer .iconGroup .linkICON {
+          padding: 5px;
+          color: #055174;
+          font-size: 40px;
+          cursor: pointer; }
+      .busquedas .jobs-result .job-offer .job-title {
+        margin-top: 10px;
+        font-weight: 700;
+        color: black; }
+      .busquedas .jobs-result .job-offer .icon {
+        padding: 3px;
+        margin-right: 4px;
+        color: #0077B5;
+        font-size: 18px; }
+      .busquedas .jobs-result .job-offer:hover .icon {
+        transition: 0.8s; }
+      .busquedas .jobs-result .job-offer label {
+        color: rgba(30, 30, 30, 0.8);
+        text-align: left; }
+  .busquedas .linkedin-wrapper {
+    border-radius: 5px;
+    text-align: center;
+    color: rgba(100, 100, 100, 0.8);
+    background-image: linear-gradient(-20deg, #055174 0%, #75fff0 100%);
+    padding: 18px;
+    position: relative; }
+    .busquedas .linkedin-wrapper label, .busquedas .linkedin-wrapper span {
+      color: black;
+      padding: 5px; }
+      .busquedas .linkedin-wrapper label.link, .busquedas .linkedin-wrapper span.link {
+        color: aliceblue; }
+    .busquedas .linkedin-wrapper .toolimg {
+      height: 90px;
+      padding: 5px;
+      display: block;
+      margin: 0 auto; }
+    .busquedas .linkedin-wrapper .linkedin-msg {
+      display: none;
+      text-align: center;
+      color: black; }
+      .busquedas .linkedin-wrapper .linkedin-msg p {
+        margin: 0;
+        padding: 5px; }
+        .busquedas .linkedin-wrapper .linkedin-msg p span {
+          color: #B9DCE0; }
+    .busquedas .linkedin-wrapper .linkedin-icon {
+      padding: 5px;
+      font-size: 18px; }
+    .busquedas .linkedin-wrapper #linkedin-but {
+      margin-top: 10px; }
+    .busquedas .linkedin-wrapper .form-control, .busquedas .linkedin-wrapper .input-group-addon {
+      background-color: rgba(255, 255, 255, 0.9);
+      font-size: 11px;
+      border-radius: 5px;
+      text-align: center;
+      outline: none;
+      border: 0;
+      box-shadow: 0;
+      color: rgba(30, 30, 30, 0.8);
+      border-bottom: 1px solid white; }
+      .busquedas .linkedin-wrapper .form-control:focus, .busquedas .linkedin-wrapper .input-group-addon:focus {
+        outline: none;
+        border: 0; }
+
+/*CONTACTO SECTION*/
+.contacto {
+  background-attachment: fixed;
+  background: #EDEEF2;
+  background-size: cover;
+  padding: 20px; }
+  .contacto .row {
+    padding: 0px;
+    margin: 0px; }
+  .contacto input, .contacto textarea {
+    border-right: none;
+    border-left: none;
+    font-size: 13px;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background-color: rgba(100, 100, 100, 0.25);
+    color: #055174;
+    transition: 1.6s; }
+    .contacto input:focus, .contacto textarea:focus {
+      outline: none;
+      box-shadow: none;
+      background-color: rgba(100, 100, 100, 0.25);
+      color: #055174;
+      transition: 1.6s; }
+
+#footer-wrapper .footer-title {
+  font-weight: 700;
+  padding: 2px; }
+#footer-wrapper .copyright {
+  box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.4);
+  height: 55%;
+  background-color: rgba(105, 120, 131, 0.34);
+  color: black;
+  box-shadow: 10px 10px 5px #888888;
+  padding: 18px; }
+  #footer-wrapper .copyright .telefono, #footer-wrapper .copyright .direccion, #footer-wrapper .copyright .social-media {
+    padding: 10px;
+    text-align: center; }
+  #footer-wrapper .copyright .social-media a {
+    text-decoration: none; }
+    #footer-wrapper .copyright .social-media a span {
+      color: #055174;
+      padding: 5px;
+      font-size: 30px; }
+  #footer-wrapper .copyright p, #footer-wrapper .copyright h5 {
+    padding: 3px;
+    margin-bottom: 0;
+    margin: 0; }
+    #footer-wrapper .copyright p span, #footer-wrapper .copyright h5 span {
+      padding: 8px;
+      color: #055275; }
+#footer-wrapper .design-contact {
+  cursor: pointer;
+  height: 45%;
+  background-color: #24292E;
+  color: whitesmoke;
+  font-size: 15px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5); }
+  #footer-wrapper .design-contact p {
+    padding: 10px;
+    margin-bottom: 0; }
+
+.admin .linkedin .linkelist {
+  height: 400px;
+  overflow-y: scroll; }
+.admin .jobWrapper {
+  padding: 5px;
+  height: 400px;
+  overflow-y: scroll; }
+  .admin .jobWrapper .jobMenu {
+    padding: 10px;
+    border-bottom: 1px solid #055174; }
+    .admin .jobWrapper .jobMenu h4 {
+      display: inline-block; }
+
+li > a, .servWrapper {
+  position: relative;
+  color: #000;
+  text-decoration: none; }
+
+li > a:hover, .servWrapper:hover {
+  color: #000;
+  text-decoration: none; }
+
+li > a:before, .servWrapper:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.8px;
+  bottom: 0;
+  left: 0;
+  background-color: #00a896;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s; }
+
+li > a:hover:before, .servWrapper:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1); }
+
+/*# sourceMappingURL=estilos.css.map */

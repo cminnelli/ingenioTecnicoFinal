@@ -53,6 +53,7 @@ function navbar(){
 		var x = window.scrollY;
 		if (x >600){
 			nav.addClass("highNav")
+
 			ima.css({
 			display:"inline-block"
 			})
@@ -67,6 +68,7 @@ function navbar(){
 
 		}else{
 			nav.removeClass("highNav")
+	
 			ima.css({
 			display:"none"
 			})

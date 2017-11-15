@@ -7,10 +7,12 @@ var fs = require("fs");
 var mail = require("./node_aux/nodeMailer.js")
 var mailingenio = "contacto.ingeniotecnico@gmail.com";
 
+var user = "ingeniotecnico"
+var ps = "ingenio2017."
 
 /*MONGO Y MONGOOSE*/
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://ezeburr:alaska77@ds161194.mlab.com:61194/ingeniobd"); //MODO REMOTO MLAB
+mongoose.connect("mongodb://admin:ingenio88@ds243085.mlab.com:43085/ingeniotecnico");
 // /*mongoose.connect("mongodb://localhost:27017/autos");  MODO LOCAL  */
 
 /*MODELOS DE MONGOOSE*/
@@ -164,16 +166,39 @@ app.post("/joboffer_remove/:job" , function(req,res){
 
 })
 
+/*LOGIN*/
+
+var validate = function(us , pass , callback){
+	var result;	
+	if ((us === mailingenio || us === user) && pass===ps ){
+		result = true
+	}else{
+		result = false
+	}
+	callback(result)
+	
+	}
+	
+	
+	app.get("/login" , function(req,res,next){
+		res.sendFile(path.join(__dirname,"login.html"))
+	})
+	
+	app.post("/welcome_admin" , function(req,res,next){
+		var pp = req.body.password
+		var uu = req.body.user
+		validate(uu , pp , function(rta){
+			if (rta===true) {
+				res.sendFile(path.join(__dirname,"myadmin.html"))
+			}else{
+				res.send("Usuario Incorrecto, vuelva a intentarlo!")
+			}
+		})
+	
+	})
+	
 
 
-/*RESOLVER*/
-// app.post("/eraseJob:id" , function(err , job){
-// var joberase= req.params.id;
-// 		user.remove({puesto:"charlie" ,apellido: “minnelli”}, function(err){  
-// 		    if (err) return handleError(err);
-// 		})
-
-// })
 
 
 

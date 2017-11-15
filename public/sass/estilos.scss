@@ -60,7 +60,7 @@ $font-titulos:'Quicksand', sans-serif;
 		color:$color-grey;
 		font-family: "Roboto";
 		@media screen and (max-width:600px){
-			bottom:60%;
+			bottom:53%;
 			
 		}
 
@@ -135,9 +135,8 @@ border:none;
 	height: 40px;
 	background-color:$color-ingenio1;
 	position: fixed;
-	color:white;
 	transition:0.6s;
-	animation:fadeInDown 2.5s;
+
 }
 
 /*PORTADA SECTION*/
@@ -338,9 +337,8 @@ $color-titulos:#484848;
 				
 				&:hover{
 					transition:0.5s;
-					transform: scale(1.06,1.06);
-					filter: blur(0);
-					transform-origin: 50% 0;
+					-webkit-transform: scale(1.03,1.03);
+
 				}
 				&:hover img{
 					
@@ -772,4 +770,44 @@ li > a:hover:before ,.servWrapper:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+
+/*LOGIN*/
+
+.login{
+	padding:30px;
+	background-color:#F9F9F9;
+	font-family: "Arial";
+	font-weight: 200;
+	text-align: center;
+	font-family: $font-primary;	
+	.logoIT{
+		height: 100px;
+		
+	}
+	h3{
+		margin:0;
+		padding:10px;
+	}	
+	h4{
+		margin:0;
+		padding:10px;
+		font-weight: 700;
+	}
+
+	.logwrapper{
+
+		background-color:white;
+		padding:30px;
+		border-radius: 5px;
+		border:0.6px solid rgba(100,100,100,0.5);
+	}
+	input{
+	border:0.6px solid rgba(100,100,100,0.5);	
+	}
+	.form-group{
+		padding:3px;
+		text-align: left;
+	}
+
 }
